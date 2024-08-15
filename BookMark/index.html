@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bookmark</title>
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+            rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <section class="container-lg my-5">
+            <div
+                class="mainContent d-flex justify-content-center align-items-center">
+                <h1 class="text-center position-relative">
+                    <div class="layer"></div>
+                    Bookmarker
+                </h1>
+            </div>
+            <div class="bodyContent  border-top border-2 border-dark w-100">
+                <h2 class="subTitle text-capitalize my-4 text-center">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark Your Favorite Sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+            </div>
+            <div class="inputs py-5">
+                <div class=" mb-4">
+                    <label for="SiteName" class="mb-2 fw-bold">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                        Site Name</label>
+                    <input type="text" class="form-control " id="SiteName"
+                        placeholder="Bookmark Name">
+                    <p class="text-danger d-none pt-1 text-wrong">Site name must
+                        contain at least 3 characters</p>
+                </div>
+                <div class=" mb-4">
+                    <label for="SiteUrl" class="mb-2 fw-bold">
+                        <i class="fa-solid fa-link"></i>
+                        Site URL</label>
+                    <input type="text" class="form-control " id="SiteUrl"
+                        placeholder="Website URL">
+                    <p class="text-danger d-none pt-1 text-wrong">Site URL must
+                        be a valid one</p>
+                </div>
+                <button id="addBtn"
+                    class="btn btn-submit text-white px-5 py-2 d-block mx-auto">Submit</button>
+            </div>
+            <div class="border-top border-2 border-dark bodyContent w-100">
+                <div class="mt-4 table-responsive">
+                    <table class="text-center table ">
+                        <thead>
+                            <tr>
+                                <th scope=col>Index</th>
+                                    <th scope=col>Name</th>
+                                        <th scope=col>Visit</th>
+                                            <th scope=col>Delete</th>
+                                                <tbody id=tbody></tbody>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+            </section>
+            <div class="bg-opacity-50 fade modal">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content p-2 pb-0">
+                        <div class=modal-header>
+                            <div class="d-flex modal-title" id=modalTitleId>
+                                <div class="me-2 rounded-circle bg-danger"></div>
+                                <div class="me-2 rounded-circle bg-warning"></div>
+                                <div class="me-2 rounded-circle bg-success"></div>
+                            </div>
+                            <button class=btn-close type=button aria-label=Close data-bs-dismiss=modal></button>
+                        </div>
+                        <div class="modal-body p-3">
+                            <p>Site Name or Url is not valid, Please follow the rules below :</p>
+                                <p class="mt-2 fs-5 mb-0 py-2">
+                                    <i class="text-danger fa-circle-right fa-regular"></i>
+                                     Site name must contain at least 3 characters</p>
+                                     <p class="mt-2 fs-5 mb-0 py-2">
+                                        <i class="text-danger fa-circle-right fa-regular"></i>
+                                        Site URL must be a valid one
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="js/bootstrap.bundle.js"></script>
+            <script src="js/main.js"></script>
+</body>
+</html>

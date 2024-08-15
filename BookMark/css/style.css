@@ -1,0 +1,58 @@
+:root {
+    --pacifico: "Pacifico", cursive;
+    --sansCaption: "PT Sans Caption", sans-serif;
+    --reghteous: "Righteous", cursive;
+    --lightYellow: rgb(254, 194, 96);
+    --green: rgb(63, 165, 92);
+    --lightGreen: rgb(178, 172, 74);
+    --lightRed: rgb(209, 81, 45);
+}
+
+body{
+    background-color:rgb(247, 236, 222) ;
+    font-family: var(--sansCaption);
+}
+.layer{
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 35%;
+background-color: var(--lightYellow);
+z-index: -1 !important;
+transition: height 500ms;
+}
+h1{
+    font-family: var(--pacifico);
+    font-size: 50px;
+}
+h1:hover .layer{
+height: 70%;
+}
+
+.subTitle{
+    font-family: var(--reghteous);
+    font-size: 25px;
+    background: linear-gradient(to right, var(--green) 30%, var(--lightGreen) 70%);
+    background-clip: content-box;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.bodyContent{
+    border-top: dotted !important;
+    margin-top: 50px;
+}
+
+.btn-submit{
+    background-color: var(--lightRed);
+}
+
+.btn-submit:hover{
+    background-color: rgb(167, 60, 31) !important
+}
+.rounded-circle {
+    width: 20px;
+    height: 20px;
+}
